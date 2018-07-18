@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1> Welcome to the volunteer login page </h1>
+       
+        <h:form>
+              <p>Enter the topic name:  </p>
+              <h:inputText id="id" required="true" requiredMessage="Topic name cannot be empty !!!!" 
+                           value="#{subtopic.subtopic_name}" ></h:inputText>
+              <p>Enter your name:</p>
+              <h:inputText id="name" required="true" requiredMessage="Name cannot be empty !!!!"  value="#{subtopic.volunteername}" ></h:inputText>
+              <p>Enter the description:</p>
+              <h:inputText id="desc" required="true" requiredMessage="Description cannot be empty !!!!"  value="#{subtopic.desc}" ></h:inputText>
+              <p>Enter the number of sessions taken:</p>
+              <h:inputText id="no" required="true" requiredMessage="no cannot be empty !!!!"  value="#{subtopic.no}" ></h:inputText>
+              <h:commandButton id="submit" value="add session" action="#{teacher.addSession(subtopic.subtopic_name, subtopic.volunteername, subtopic.desc, subtopic.no)}" class="btn-lg" style="width: 200px;"></h:commandButton>
+              <h:commandButton id ="return" value ="return" action="displaysubjects"></h:commandButton>   
+        </h:form>
+    </h:body>
+</html>

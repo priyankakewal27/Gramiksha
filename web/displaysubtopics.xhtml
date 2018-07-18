@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+       <h:dataTable  
+                 
+           value="#{teacher.topic}" var="str">
+                  <h:column>
+                        <f:facet name="header">  SubTopic  </f:facet> 
+                        #{str.subtopic_name}
+                  </h:column>
+           <h:column>
+                        <f:facet name="header">  Description   </f:facet> 
+                        #{str.desc}
+                  </h:column>
+           <h:column>
+                        <f:facet name="header">  Taken By   </f:facet> 
+                        #{str.volunteername}
+                  </h:column>
+           <h:column>
+                        <f:facet name="header">  No of sessions taken  </f:facet> 
+                        #{str.no}
+                  </h:column>
+           
+       </h:dataTable>
+            <h:commandButton id="add" value="add a session" action="addsession"></h:commandButton>
+                        
+                        </h:form> 
+        
+      
+    </h:body>
+</html>
+
